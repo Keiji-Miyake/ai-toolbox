@@ -1,26 +1,34 @@
 ---
 applyTo: "**"
 ---
-# Project general coding standards
+# 一般コーディング標準
 
-## Naming Conventions
-- Use PascalCase for component names, interfaces, and type aliases
-- Use camelCase for variables, functions, and methods
-- Prefix private class members with underscore (_)
-- Use ALL_CAPS for constants
+## 命名規則
+- プロジェクトやチームで命名規則を統一する
+- 各プログラミング言語や業界標準に従った命名規則を採用する
+- 代表例：
+  - PascalCase（例: クラス・型・インターフェースなど）
+  - camelCase（例: 変数・関数・メソッドなど）
+  - ALL_CAPS（例: 定数など）
+- 必要に応じて命名規則の例外や補足をドキュメント化する
 
-## Error Handling
-- Use try/catch blocks for async operations
-- Implement proper error boundaries in React components
-- Always log errors with contextual information
+## エラー処理
+- 例外やエラーは必ずハンドリングし、適切なログや通知を行う
+- 失敗時のリカバリやフォールバックを検討する
 
-## Package Management
-- Always use pnpm instead of npm or yarn
-- Run `pnpm install` for package installation
-- Use `pnpm` for all script commands
+## パッケージ・依存管理
+- 各言語・環境の標準的なパッケージ管理ツールを利用する
+- 依存関係は明示的に管理し、不要なパッケージは削除する
 
-## Testing Frameworks
-- Use Vitest and Playwright as the standard testing frameworks
-- Do NOT use Jest (Jestの利用は禁止)
-- テスト記述・実行はVitest/Playwrightに統一すること
-- **ただし、React Nativeテンプレート（mobile-copilot等）に限りJestの利用を許容する**
+## テスト
+- 単体テスト・統合テスト・E2Eテストをバランスよく実施する
+- テスト自動化を推進し、品質を継続的に担保する
+- テストフレームワークはプロジェクト要件・技術スタックに応じて選定する
+
+## コード品質
+- 静的解析やリンターを活用し、可読性・保守性を高める
+- コードレビューを実施し、知見の共有と品質向上を図る
+
+## その他
+- ドキュメントやコメントを適切に記述し、第三者が理解しやすいコードを心がける
+- セキュリティ・パフォーマンス・拡張性も考慮する
